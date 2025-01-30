@@ -1,7 +1,5 @@
 package Exercise6;
 
-//import Exercise5.GameHelper;
-
 import java.util.ArrayList;
 
 public class DotComBust{
@@ -26,7 +24,7 @@ public class DotComBust{
         System.out.println("Pets.com, eToys.com, Go2.com");
         System.out.println("Try to sink them allin the fewest number of guesses");
 
-        for (DotCom dotCom : dotComList){
+        for (DotCom dotComToSet : dotComList){
             ArrayList<String> newLocation = helper.placeDotCom(3);
             dotComToSet.setLocationCells(newLocation);
         }
@@ -73,5 +71,19 @@ public class DotComBust{
             System.out.println("Took you long enough. " + numOfGuesses + " guesses!");
             System.out.println("Fish are dancing with your options");
         }
+    }
+
+    // Create the main method to run the programs
+    public static void main(String[] args) {
+        DotComBust game = new DotComBust();
+        game.setUpGame();
+        game.startPlying();
+    }
+
+    String camera = "";
+    int price = 0;
+
+    if(price >= 300 && price <= 400){
+        camera = "X";
     }
 }
