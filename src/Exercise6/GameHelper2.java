@@ -8,7 +8,7 @@ import java.util.Locale;
 public class GameHelper2 {
     private static final String alphabet = "abcdefg";
     private int gridLength = 7;
-    private int gridSize = 47;
+    private int gridSize = 49;
     private int [] grid = new int[gridSize];
     private int comCount = 0;
 
@@ -19,9 +19,11 @@ public class GameHelper2 {
         try{
             BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
             inputLine = is.readLine();
+
             if(inputLine.length() == 0){
                 return null;
             }
+
         } catch (Exception e){
             System.out.println("Exception: " + e);
         }
@@ -55,7 +57,7 @@ public class GameHelper2 {
                     if (location >= gridSize){
                         success = false;
                     }
-                    if (x >0 && (location % gridLength) == 0){
+                    if (x >0 && (location % gridLength == 0)){
                         success = false;
                     }
                 }else{
@@ -72,7 +74,7 @@ public class GameHelper2 {
             grid[coords[x]] = 1;
             row = (int) (coords[x] / gridLength);
             column = coords[x] % gridLength;
-            temp = String   .valueOf(alphabet.charAt(column));
+            temp = String.valueOf(alphabet.charAt(column));
 
             alphaCells.add(temp.concat(Integer.toString(row)));
             x++;

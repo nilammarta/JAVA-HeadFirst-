@@ -80,10 +80,5 @@ public class DotComBust{
         game.startPlying();
     }
 
-    String camera = "";
-    int price = 0;
 
-    if(price >= 300 && price <= 400){
-        camera = "X";
-    }
 }
